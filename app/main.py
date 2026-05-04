@@ -13,9 +13,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-        allow_origins=[
-        "https://ai-code-agent-frontend.vercel.app/"
-    ],
+    allow_origins=["*"],  # for dev (restrict later)
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
